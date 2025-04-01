@@ -1,7 +1,5 @@
 package com.devrodts.commerce.commerce.modules.image.application.dtos;
-
 import java.sql.Blob;
-import java.sql.Time;
 import java.sql.Timestamp;
 import java.util.UUID;
 
