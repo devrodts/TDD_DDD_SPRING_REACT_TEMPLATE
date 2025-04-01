@@ -1,4 +1,18 @@
 package com.devrodts.commerce.commerce.modules.image.application.dtos;
 
-public record ImageDTO() {
+import java.sql.Blob;
+import java.sql.Time;
+import java.sql.Timestamp;
+import java.util.UUID;
+
+public record ImageDTO(
+        UUID imageID,
+        String imageFileName,
+        String fileType,
+        Blob imageDataBlob,
+        String imageDownloadUrl,
+        Timestamp imageDownloadTime,
+        Timestamp imageCreationTime,
+        Timestamp imageUpdateTimestamp
+) {
 }
