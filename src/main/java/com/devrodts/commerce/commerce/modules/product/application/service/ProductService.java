@@ -1,6 +1,6 @@
 package com.devrodts.commerce.commerce.modules.product.application.service;
 
-import com.devrodts.commerce.commerce.modules.product.application.dtos.CreateProductRequestDTO;
+import com.devrodts.commerce.commerce.modules.product.application.dtos.CreateProductDTO;
 import com.devrodts.commerce.commerce.modules.product.application.dtos.ProductDTO;
 import com.devrodts.commerce.commerce.modules.product.domain.entity.ProductEntity;
 import com.devrodts.commerce.commerce.modules.product.infrastructure.mapper.ProductMapper;
@@ -16,7 +16,13 @@ public class ProductService {
         this.productRepository = productRepository;
     }
 
-    public ProductDTO createProduct(CreateProductRequestDTO request){
+    // public ProductDTO createProduct(CreateProductRequestDTO request){
+    //     ProductEntity product = ProductMapper.toDomain(request);
+    //     productRepository.save(product);
+    //     return ProductMapper.toDTO(product);
+    // }
+
+    public ProductDTO createProduct(CreateProductDTO request){
         ProductEntity product = ProductMapper.toDomain(request);
         productRepository.save(product);
         return ProductMapper.toDTO(product);
