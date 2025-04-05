@@ -16,18 +16,20 @@ public class ProductEntity {
     @GeneratedValue(strategy = GenerationType.UUID)
     private UUID productId;
 
-    private String productName;
+    private String name;
 
     @OneToMany(mappedBy = "product", cascade = CascadeType.ALL, orphanRemoval = true)
-    private List<ImageEntity> productImages;
+    private List<ImageEntity> images;
 
-    private int productQuantity;
+    private int stock;
 
-    private String productDescription;
+    private String description;
 
-    private BigDecimal productPrice;
+    private BigDecimal price;
 
-    private Timestamp creationTime;
+    private Timestamp createdAt;
+
+    private Timestamp updatedAt;
 
     public UUID getProductId() {
         return productId;
@@ -38,56 +40,59 @@ public class ProductEntity {
     }
 
     public String getProductName() {
-        return productName;
+        return name;
     }
 
-    public void setProductName(String productName) {
-        this.productName = productName;
+    public void setProductName(String name) {
+        this.name = name;
     }
 
     public List<ImageEntity> getProductImages() {
-        return productImages;
+        return images;
     }
 
-    public void setProductImages(List<ImageEntity> productImages) {
-        this.productImages = productImages;
+    public void setProductImages(List<ImageEntity> images) {
+        this.images = images;
     }
 
     public int getProductQuantity() {
-        return productQuantity;
+        return stock;
     }
 
-    public void setProductQuantity(int productQuantity) {
-        this.productQuantity = productQuantity;
+    public void setProductQuantity(int stock) {
+        this.stock = stock;
     }
 
     public String getProductDescription() {
-        return productDescription;
+        return description;
     }
 
-    public void setProductDescription(String productDescription) {
-        this.productDescription = productDescription;
+    public void setProductDescription(String description) {
+        this.description = description;
     }
 
     public BigDecimal getProductPrice() {
-        return productPrice;
+        return price;
     }
 
-    public void setProductPrice(BigDecimal productPrice) {
-        this.productPrice = productPrice;
+    public void setProductPrice(BigDecimal price) {
+        this.price = price;
     }
 
     public Timestamp getCreationTime() {
-        return creationTime;
+        return createdAt;
     }
 
-    public void setCreationTime(Timestamp creationTime) {
-        this.creationTime = creationTime;
+    public void setCreationTime(Timestamp createdAt) {
+        this.createdAt = createdAt;
     }
+
 
     public Timestamp getUpdateTime() {
-        return updateTime;
+        return updatedAt;
+    
     }
+
 
     public void setUpdateTime(Timestamp updateTime) {
         this.updateTime = updateTime;
