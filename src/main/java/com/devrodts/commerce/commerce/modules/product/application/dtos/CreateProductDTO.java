@@ -6,7 +6,7 @@ import java.util.List;
 import com.devrodts.commerce.commerce.modules.image.domain.entity.ImageEntity;
 
 public record CreateProductDTO(
-        String name,
+        @NotBlank(message = "Name is required") String name,
         String description,
         BigDecimal price,
         int stock,
