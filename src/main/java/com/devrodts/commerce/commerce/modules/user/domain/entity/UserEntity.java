@@ -8,12 +8,14 @@ import lombok.Getter;
 import lombok.Setter;
 import java.sql.Timestamp;
 import java.util.UUID;
+
+
 @Getter
 @Setter
 @Entity
 @Table(name = "users")
-
 public class UserEntity {
+
     @Id
     @GeneratedValue(strategy = jakarta.persistence.GenerationType.UUID)
     private UUID userId;
@@ -23,6 +25,13 @@ public class UserEntity {
     private String hashedPassword;
     private Timestamp userCreationTime;
     private Timestamp userUpdateTime;
+    private String zipcode;
+    private String streetAddress;
+    private String city;
+    private String state;
+    private String country;
+    private String phoneNumber;
+    private String userRole;
 
 
     public UserEntity() {
@@ -55,4 +64,33 @@ public class UserEntity {
     public void setUserUpdateTime(Timestamp userUpdateTime) {
         this.userUpdateTime = userUpdateTime;
     }
+
+    public void setZipcode(String zipcode) {
+        this.zipcode = zipcode;
+    }
+
+    public void streetAddress(String streetAddress){
+        this.streetAddress = streetAddress;
+    }
+
+    public void city(String city){
+        this.city = city;
+    }
+
+    public void state(String state){
+        this.state = state;
+    }
+
+    public void country(String country){
+        this.country = country;
+    }
+
+    public void setPhoneNumber(String phoneNumber) {
+        this.phoneNumber = phoneNumber;
+    }
+
+    public void setRole(String role) {
+        this.userRole = role;
+    }
+
 }
