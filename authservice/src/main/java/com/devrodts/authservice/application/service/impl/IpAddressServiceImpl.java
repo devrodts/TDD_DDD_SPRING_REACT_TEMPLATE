@@ -1,4 +1,4 @@
-package com.devrodts.authservice.service.impl;
+package com.devrodts.authservice.application.service.impl;
 
 import java.util.List;
 
@@ -9,7 +9,8 @@ import org.springframework.transaction.annotation.Transactional;
 import com.devrodts.authservice.entity.User;
 import com.devrodts.authservice.entity.UserIpAddress;
 import com.devrodts.authservice.repository.UserIpAddressRepository;
-import com.devrodts.authservice.service.IpAddressService;
+import com.devrodts.authservice.application.service.IpAddressService;
+
 
 @Service
 public class IpAddressServiceImpl implements IpAddressService {

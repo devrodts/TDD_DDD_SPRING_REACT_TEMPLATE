@@ -1,4 +1,4 @@
-package com.devrodts.authservice.service;
+package com.devrodts.authservice.application.service;
 
 import com.devrodts.authservice.entity.User;
 import com.devrodts.authservice.entity.UserIpAddress;
